@@ -43,6 +43,8 @@ for (ii, center_BGR) in enumerate(centers_BGR):
 				print("y coordinate:", circles[ii][1], "pixel")
 				cv2.putText(img_show, "red ball", ((circles[ii][0]-46).astype(np.uint32), circles[ii][1].astype(np.uint32)), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 255, 0), 2)
 
+print("There are ",circles.shape[0], " balls in the image.")
+
 # show image and red ball
 cv2.imshow("Image", img_show)
 cv2.waitKey(0)
